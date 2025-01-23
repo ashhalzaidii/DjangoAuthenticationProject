@@ -8,7 +8,7 @@ from django.core.mail import EmailMessage
 from django.utils import timezone
 from django.urls import reverse
 from .models import *
-
+# 4567890ytgvbhjklm
 @login_required
 def Home(request):
     return render(request, 'index2.html')
