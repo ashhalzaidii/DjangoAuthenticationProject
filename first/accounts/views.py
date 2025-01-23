@@ -8,11 +8,11 @@ from django.core.mail import EmailMessage
 from django.utils import timezone
 from django.urls import reverse
 from .models import *
-# 4567890ytgvbhjklm
+# dfghjkl
 @login_required
 def Home(request):
     return render(request, 'index2.html')
-
+# fghjk
 def RegisterView(request):
     if request.method == "POST":
         first_name = request.POST.get('first_name')
