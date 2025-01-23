@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MARKSHEET</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="html, css, html tables, table">
+    <meta name="Description" content="html table">
+    <style>
+        body{
+            background-color: #c5cae9;
+            padding: 25px;
+          }
+          
+          .container{
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border-radius: 12px;
+            background-color: #90a4ae;
+            font-family: Lato;
+          }
+          
+          .container h2{
+            text-align: center;
+          }
+          
+          table{
+            margin: 0 auto;
+          }
+          
+          td, th {
+            padding: 12px;
+            border: 2px dotted;
+            text-align: center;
+          }
+          
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Marksheet</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>English</th>
+            <th>Maths</th>
+            <th>Science</th>
+            <th>Computer Science</th>
+            <th>Social Studies</th>
+            <th>Urdu</th>
+            <th>Maximum Marks</th>
+            <th>Marks Obtained</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+          <tr>  
+        </thead>
+        <tbody>
+        {% for n in students %}
+          <tr>
+            <td>{{n.obj.name}}</td>
+            <td>{{n.obj.subject1}}</td>
+            <td>{{n.obj.subject2}}</td>
+            <td>{{n.obj.subject3}}</td>
+            <td>{{n.obj.subject4}}</td>
+            <td>{{n.obj.subject5}}</td>
+            <td>{{n.obj.subject6}}</td>
+            <td>{{max}}</td>
+            <td>{{n.total}}</td>
+            <td>{{n.percentage}}%</td>
+            <td>{{n.grade}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
